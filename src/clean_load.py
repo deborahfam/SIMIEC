@@ -2,10 +2,13 @@ import json
 import pandas as pd
 import os
 
-FILE_PATH = 'data/result.json' 
+FILE_PATH = 'data/result.json'
+RESULTS_DIR = 'results'
 KEYWORD_LUZ = ['luz', 'corriente', 'apagon', 'apagón', 'fui', 'vino', 'quito', 'puso']
 
-def normalizar_texto(texto_raw):
+os.makedirs(RESULTS_DIR, exist_ok=True)
+
+def normalize_text(texto_raw):
     if isinstance(texto_raw, str):
         return texto_raw
     elif isinstance(texto_raw, list):
@@ -18,59 +21,67 @@ def normalizar_texto(texto_raw):
         return texto_limpio
     return ""
 
-def cargar_y_limpiar_datos(filepath):
-    print(f"1. Buscando archivo en: {filepath}")
+def load_and_clean_data(filepath):
+    print(f"1. Searching file at: {filepath}")
     
     if not os.path.exists(filepath):
-        print(f"❌ ERROR: No se encuentra el archivo '{filepath}'.")
-        print("   Verifica que el nombre sea correcto o usa la ruta absoluta.")
+        print(f"❌ ERROR: File '{filepath}' not found.")
         return None
 
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
             data = json.load(f)
     except Exception as e:
-        print(f"❌ ERROR al leer el JSON: {e}")
+        print(f"❌ ERROR reading JSON: {e}")
         return None
 
     messages = []
-    print("2. Procesando estructura del JSON...")
+    print("2. Processing JSON structure...")
     
     if 'messages' in data:
         raw_msgs = data['messages']
     else:
         raw_msgs = data
 
-    contador_procesados = 0
+    processed_count = 0
+    skipped_assistant = 0
     for msg in raw_msgs:
         if msg.get('type') == 'message':
+            from_name = msg.get('from', '') or ''
+            if from_name and ('Asistente en Línea' in from_name or 'Asistente en Línea 2' in from_name):
+                skipped_assistant += 1
+                continue
+            
             texto_raw = msg.get('text', '')
-            texto_final = normalizar_texto(texto_raw)
+            texto_final = normalize_text(texto_raw)
             
             if len(texto_final) > 1:
                 messages.append({
                     'date': msg['date'],
-                    'from': msg.get('from', 'Anonimo'),
+                    'from': from_name,
                     'from_id': msg.get('from_id', 'unknown'),
                     'text': texto_final
                 })
-                contador_procesados += 1
+                processed_count += 1
+    
+    if skipped_assistant > 0:
+        print(f"   -> Skipped {skipped_assistant} messages from 'Asistente en Línea'")
 
-    print(f"   -> Mensajes extraídos: {contador_procesados}")
+    print(f"   -> Extracted messages: {processed_count}")
     
     if not messages:
-        print("⚠️ ALERTA: No se encontraron mensajes de texto válidos.")
+        print("⚠️ WARNING: No valid text messages found.")
         return None
 
     df = pd.DataFrame(messages)
     df['date'] = pd.to_datetime(df['date'])
     return df
 
-def filtro_heuristico(df):
-    print("3. Aplicando filtro de relevancia (palabras clave)...")
+def heuristic_filter(df):
+    print("3. Applying relevance filter (keywords)...")
     
     if df is None or df.empty:
-        print("❌ Error: El DataFrame está vacío, no se puede filtrar.")
+        print("❌ Error: DataFrame is empty, cannot filter.")
         return None
 
     df['es_reporte'] = df['text'].astype(str).str.lower().apply(
@@ -79,24 +90,34 @@ def filtro_heuristico(df):
     
     df_relevantes = df[df['es_reporte'] == True].copy()
     
-    print(f"   -> Total mensajes: {len(df)}")
-    print(f"   -> Reportes potenciales (con palabras clave): {len(df_relevantes)}")
+    print(f"   -> Total messages: {len(df)}")
+    print(f"   -> Potential reports (with keywords): {len(df_relevantes)}")
     return df_relevantes
+
+def process_data(input_file=None, output_file=None):
+    if input_file is None:
+        input_file = FILE_PATH
+    if output_file is None:
+        output_file = os.path.join(RESULTS_DIR, 'datos_rescatados.csv')
     
-if __name__ == "__main__":
-    df_raw = cargar_y_limpiar_datos(FILE_PATH)
+    df_raw = load_and_clean_data(input_file)
     
     if df_raw is not None:
-        df_limpio = filtro_heuristico(df_raw)
+        df_limpio = heuristic_filter(df_raw)
         
         if df_limpio is not None and not df_limpio.empty:
-            print("\n--- ✅ VISTA PREVIA (Últimos 5 mensajes) ---")
+            print("\n--- ✅ PREVIEW (Last 5 messages) ---")
             print(df_limpio[['date', 'text']].tail(5))
             
-            output_csv = 'datos_rescatados.csv'
-            df_limpio.to_csv(output_csv, index=False)
-            print(f"\nArchivo guardado: {output_csv}")
+            df_limpio.to_csv(output_file, index=False)
+            print(f"\nFile saved: {output_file}")
+            return df_limpio
         else:
-            print("\n⚠️ No se encontraron mensajes relevantes con las palabras clave.")
+            print("\n⚠️ No relevant messages found with keywords.")
+            return None
     else:
-        print("\n❌ El proceso se detuvo por errores en la carga.")
+        print("\n❌ Process stopped due to loading errors.")
+        return None
+    
+if __name__ == "__main__":
+    process_data()

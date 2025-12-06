@@ -1,47 +1,51 @@
-Lugar_Sugerido,Frecuencia,Nota de limpieza
-Alamar,27,
-Santiago,22,"(Sumado con ""Stgo"")"
-San Miguel,22,
-San Agustín,20,
-Octubre,20,"(Sumado con ""Octubre se"")"
-Playa,18,
-Marianao,17,
-Santa Fe,17,
-Santos Suárez,17,"(Sumado con ""Santo Suárez"")"
-Lawton,16,
-Valle Grande,15,
-Querejeta,14,
-Paula,13,
-Luyanó,11,"(Sumado con ""Luyano"")"
-Centro Habana,11,
-Infanta,11,
-Regla,10,
-Casablanca,10,
-Miramar,10,
-Guanabacoa,10,
-Pogolotti,9,
-Wajay,9,
-Boyeros,8,
-Alberro,7,
-Cotorro,7,
-Calabazar,7,
-Las Vegas,6,
-Siboney San,6,
-Santa Catalina,5,
-Nuevo Vedado,5,
-Panchito Gómez,4,
-San Lázaro,4,
-Belén,4,
-Santa,4,
-Habana,4,
-Arroyo Arenas,4,
-Cuba,4,
-Miraflores,4,
-Guanabo,4,
-La Ceiba,4,
-Palmar Pocitos,4,
-Cojimar,4,
-Jacomino,4,
-Camilo Cienfuegos,3,
-California,3,
-Alturas,3,
+Lugar_Sugerido,Frecuencia
+alamar,1424
+san miguel,1303
+playa,1197
+guanabacoa,978
+lawton,969
+marianao,959
+san agustín,855
+la habana,718
+octubre,713
+regla,691
+boyeros,608
+centro habana,566
+santos suárez,500
+cuba,492
+paula,479
+santa fe,443
+luyano,422
+miramar,411
+nuevo vedado,377
+cojimar,344
+habana,340
+versalles,334
+la lisa,328
+arroyo naranjo,318
+santiago,287
+pogolotti,280
+buenavista,277
+calabazar,265
+miraflores,232
+guanabo,231
+casablanca,212
+línea,210
+alturas,206
+california,205
+víbora park,197
+valle grande,189
+mantilla,185
+plaza,181
+luyanó,180
+querejeta,179
+mayo,173
+alberro,172
+la coronela,166
+santa,163
+belén,161
+managua,161
+san francisco,159
+santo suárez,155
+wajay,153
+siboney,152

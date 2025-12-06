@@ -1,99 +1,880 @@
 Source,Target,Weight
-Santa,Santa Fe,104
-Centro Habana,Habana,77
-Playa,Santa,59
-Playa,Santa Fe,58
-Las Vegas,Santiago,42
-Boyeros,Calabazar,31
-Alberro,Cotorro,29
-Santa,Santa Catalina,29
-Miramar,Playa,28
-Jacomino,San Miguel,22
-Playa,Querejeta,22
-La Ceiba,Playa,21
-Marianao,Santa,17
-Marianao,Santa Fe,17
-Octubre,Santa,16
-Octubre,Santa Catalina,16
-Cotorro,Santa,11
-Habana,Regla,10
-Guanabacoa,Santa,10
-California,San Miguel,9
-Guanabacoa,Santa Fe,9
-Boyeros,Wajay,8
-Habana,Santa,8
-Cuba,Playa,8
-Marianao,Palmar Pocitos,7
-Boyeros,Santa,7
-Paula,Siboney San,6
-Luyanó,Octubre,6
-Habana,Playa,5
-Guanabacoa,Habana,5
-Camilo Cienfuegos,Habana,5
-Alberro,Santa,5
-Alturas,Belén,5
-Alamar,Regla,4
-Habana,San Miguel,4
-Marianao,Pogolotti,4
-Belén,Marianao,4
-Centro Habana,Santa,4
-Boyeros,Miraflores,4
-Alturas,San Miguel,3
-Centro Habana,San Miguel,3
-Alturas,Marianao,3
-Cuba,Querejeta,3
-Alturas,Guanabacoa,3
-Luyanó,San Miguel,3
-Jacomino,Regla,3
-Lawton,Santos Suárez,3
-Habana,Infanta,3
-Octubre,Santos Suárez,3
-Cuba,Guanabacoa,2
-Belén,Santa,2
-Cuba,Habana,2
-Lawton,Octubre,2
-Habana,Octubre,2
-Habana,San Agustín,2
-Habana,Lawton,2
-Habana,San Lázaro,2
-Belén,Santa Fe,2
-Alturas,Habana,2
-Centro Habana,San Lázaro,2
-Alturas,Playa,1
-Boyeros,Las Vegas,1
-Alamar,Habana,1
-Alturas,La Ceiba,1
-Boyeros,Habana,1
-California,Jacomino,1
-Cotorro,Habana,1
-Centro Habana,Infanta,1
-Casablanca,Regla,1
-Boyeros,Regla,1
-Boyeros,Santiago,1
-Calabazar,Regla,1
-California,Habana,1
-Habana,Pogolotti,1
-Guanabo,Habana,1
-Habana,Jacomino,1
-Cuba,Regla,1
-Cuba,Marianao,1
-Habana,Paula,1
-Habana,Nuevo Vedado,1
-Habana,Marianao,1
-Habana,Miramar,1
-Jacomino,Paula,1
-Infanta,San Miguel,1
-Habana,Santos Suárez,1
-Luyanó,Santa Fe,1
-Marianao,Playa,1
-Lawton,Luyanó,1
-Luyanó,Santa,1
-Paula,Regla,1
-Playa,Regla,1
-Paula,San Miguel,1
-Pogolotti,Querejeta,1
-Regla,San Miguel,1
-Regla,Santa Fe,1
-Regla,Santa,1
-Santa,Santos Suárez,1
-Santa Catalina,Santos Suárez,1
+habana,línea,4831
+habana,la habana,4557
+santa,santa fe,4100
+centro habana,habana,4057
+luyano,luyanó,2701
+playa,santa,2169
+playa,santa fe,2129
+línea,playa,2062
+guanabacoa,línea,1355
+la lisa,línea,1342
+línea,santa,1259
+línea,marianao,1115
+miramar,playa,1070
+boyeros,calabazar,1009
+boyeros,línea,882
+alamar,línea,849
+arroyo naranjo,línea,840
+la lisa,san agustín,810
+marianao,santa,759
+línea,san miguel,752
+marianao,santa fe,741
+línea,regla,737
+línea,santa fe,712
+la lisa,versalles,669
+centro habana,línea,660
+playa,querejeta,635
+paula,san francisco,634
+buenavista,playa,628
+línea,pogolotti,625
+la coronela,la lisa,508
+boyeros,mayo,492
+alturas,la lisa,487
+lawton,línea,472
+luyanó,línea,469
+luyano,línea,469
+alamar,habana,463
+línea,mayo,451
+alberro,línea,444
+cuba,habana,428
+cuba,playa,422
+línea,octubre,421
+habana,playa,420
+guanabacoa,habana,403
+habana,santa,398
+lawton,octubre,375
+línea,miramar,373
+guanabacoa,santa,370
+playa,siboney,364
+california,san miguel,358
+línea,san agustín,356
+marianao,pogolotti,343
+línea,nuevo vedado,342
+la coronela,línea,327
+cuba,la habana,316
+la habana,línea,305
+habana,regla,299
+boyeros,habana,297
+arroyo naranjo,santa,297
+habana,marianao,295
+guanabacoa,santa fe,295
+línea,paula,289
+habana,san miguel,285
+línea,mantilla,267
+línea,plaza,266
+luyanó,octubre,264
+luyano,octubre,264
+cuba,línea,261
+arroyo naranjo,habana,258
+octubre,santa,254
+la lisa,valle grande,247
+arroyo naranjo,víbora park,241
+boyeros,miraflores,240
+alturas,belén,236
+cojimar,línea,229
+habana,mayo,226
+casablanca,línea,226
+boyeros,wajay,224
+habana,la lisa,216
+habana,pogolotti,214
+línea,siboney,211
+alturas,san miguel,205
+línea,santos suárez,201
+calabazar,línea,199
+boyeros,santa,186
+guanabo,línea,186
+cuba,mayo,184
+guanabacoa,regla,178
+línea,versalles,175
+alturas,línea,175
+línea,querejeta,174
+línea,wajay,173
+línea,víbora park,171
+arroyo naranjo,managua,169
+alturas,marianao,169
+belén,marianao,168
+habana,santa fe,166
+línea,miraflores,161
+luyanó,san miguel,149
+luyano,san miguel,149
+guanabo,habana,141
+paula,san miguel,139
+línea,valle grande,137
+octubre,santos suárez,136
+la habana,mayo,133
+casablanca,regla,129
+la habana,playa,128
+habana,octubre,127
+habana,lawton,125
+habana,paula,121
+regla,santa,121
+playa,regla,120
+nuevo vedado,plaza,118
+línea,santiago,112
+arroyo naranjo,mantilla,112
+línea,san francisco,111
+santa,santos suárez,111
+buenavista,línea,109
+san francisco,san miguel,103
+cojimar,habana,100
+cuba,regla,99
+habana,plaza,98
+línea,santo suárez,97
+línea,managua,94
+la lisa,regla,92
+habana,wajay,87
+habana,mantilla,81
+boyeros,regla,81
+regla,san miguel,81
+alamar,regla,80
+marianao,regla,78
+la habana,regla,78
+paula,playa,78
+luyano,santa,76
+luyanó,santa,76
+habana,luyanó,76
+habana,luyano,76
+mayo,regla,75
+marianao,playa,74
+la habana,san miguel,73
+alturas,luyano,72
+alturas,luyanó,72
+alamar,la habana,71
+la habana,santa,70
+guanabacoa,versalles,69
+calabazar,habana,68
+habana,santos suárez,66
+la habana,marianao,66
+paula,siboney,65
+lawton,santa,65
+octubre,santo suárez,64
+centro habana,san miguel,64
+cuba,santa,63
+cuba,paula,63
+regla,santa fe,62
+habana,nuevo vedado,62
+boyeros,santiago,62
+guanabacoa,la habana,62
+centro habana,la habana,61
+cuba,guanabacoa,61
+la habana,la lisa,60
+california,línea,59
+belén,santa,59
+belén,santa fe,59
+regla,san agustín,59
+habana,san agustín,59
+mayo,playa,59
+arroyo naranjo,regla,58
+alberro,santa,57
+cuba,marianao,57
+la habana,lawton,57
+san francisco,siboney,57
+luyanó,santa fe,56
+luyano,santa fe,56
+lawton,san francisco,55
+alturas,habana,55
+santa,víbora park,54
+octubre,regla,54
+lawton,regla,54
+habana,versalles,54
+alturas,guanabacoa,54
+alturas,santa,52
+habana,santiago,50
+la lisa,mayo,50
+luyanó,regla,49
+centro habana,santa,49
+luyano,regla,49
+nuevo vedado,santa,49
+la habana,octubre,49
+la habana,plaza,48
+habana,la coronela,47
+alturas,santa fe,46
+alamar,guanabacoa,46
+cuba,san miguel,46
+la coronela,san agustín,46
+centro habana,regla,46
+alamar,cuba,45
+cuba,santiago,44
+habana,san francisco,44
+la lisa,paula,43
+santa,santo suárez,43
+cuba,lawton,42
+lawton,luyano,42
+calabazar,regla,42
+boyeros,la habana,42
+cuba,santa fe,42
+arroyo naranjo,la habana,42
+lawton,san miguel,42
+lawton,luyanó,42
+alamar,santa,40
+lawton,mayo,40
+la habana,santos suárez,40
+alamar,mayo,40
+guanabacoa,mayo,39
+guanabacoa,paula,39
+octubre,san miguel,38
+mayo,san miguel,38
+la lisa,playa,38
+habana,miramar,37
+mayo,paula,37
+marianao,mayo,37
+guanabacoa,octubre,37
+habana,víbora park,36
+lawton,paula,36
+paula,santa,36
+habana,santo suárez,36
+boyeros,plaza,36
+paula,santos suárez,35
+marianao,paula,35
+habana,querejeta,35
+arroyo naranjo,octubre,35
+habana,valle grande,35
+cuba,la lisa,35
+alamar,santa fe,34
+cojimar,regla,34
+san miguel,santa,34
+plaza,santa,34
+paula,regla,34
+cojimar,cuba,33
+mayo,santa,33
+nuevo vedado,paula,33
+managua,santiago,33
+alturas,playa,32
+guanabacoa,san miguel,32
+la habana,paula,31
+octubre,santa fe,31
+guanabo,playa,31
+alamar,playa,31
+boyeros,octubre,31
+lawton,santos suárez,31
+belén,línea,31
+guanabo,santa,30
+centro habana,cuba,30
+alturas,arroyo naranjo,30
+la habana,santa fe,30
+boyeros,guanabacoa,29
+mantilla,octubre,29
+arroyo naranjo,mayo,28
+boyeros,paula,27
+marianao,plaza,27
+mayo,plaza,27
+alamar,marianao,27
+octubre,san francisco,26
+cuba,plaza,26
+mantilla,santa,26
+la habana,santiago,26
+guanabacoa,playa,26
+cuba,valle grande,26
+centro habana,paula,26
+arroyo naranjo,paula,26
+cuba,santos suárez,25
+playa,san miguel,25
+mayo,octubre,25
+alamar,octubre,24
+alamar,boyeros,24
+guanabacoa,plaza,24
+habana,siboney,24
+guanabacoa,marianao,24
+mantilla,víbora park,23
+cuba,octubre,23
+la lisa,marianao,23
+mayo,nuevo vedado,23
+california,habana,23
+la coronela,mayo,23
+alturas,regla,23
+alturas,la habana,22
+regla,víbora park,22
+mayo,san agustín,22
+cuba,san agustín,22
+cojimar,la habana,22
+centro habana,mayo,22
+boyeros,santa fe,21
+lawton,víbora park,21
+arroyo naranjo,cuba,21
+boyeros,cuba,21
+la coronela,versalles,21
+casablanca,habana,21
+alamar,paula,21
+la habana,luyano,21
+la habana,luyanó,21
+marianao,octubre,20
+alamar,cojimar,20
+la habana,mantilla,20
+guanabo,marianao,20
+la habana,san agustín,20
+cojimar,paula,20
+plaza,san miguel,20
+guanabacoa,mantilla,20
+marianao,san miguel,20
+paula,víbora park,20
+octubre,playa,19
+playa,plaza,19
+octubre,víbora park,19
+miramar,regla,19
+alturas,mayo,19
+centro habana,playa,19
+cuba,víbora park,19
+alamar,guanabo,19
+lawton,plaza,18
+boyeros,playa,18
+cuba,luyanó,18
+playa,versalles,18
+cuba,luyano,18
+buenavista,habana,18
+mayo,santos suárez,18
+boyeros,nuevo vedado,18
+cuba,querejeta,18
+alberro,habana,18
+octubre,plaza,17
+la coronela,regla,17
+managua,regla,17
+guanabacoa,luyano,17
+alamar,mantilla,17
+guanabacoa,luyanó,17
+calabazar,la habana,17
+guanabacoa,nuevo vedado,17
+luyanó,paula,16
+mantilla,santa fe,16
+alamar,luyano,16
+alamar,miramar,16
+luyano,paula,16
+la habana,versalles,16
+alamar,luyanó,16
+miramar,santa,16
+boyeros,mantilla,16
+paula,san agustín,16
+paula,valle grande,16
+la coronela,la habana,15
+octubre,paula,15
+marianao,miramar,15
+boyeros,marianao,15
+playa,santo suárez,15
+cuba,versalles,15
+alamar,nuevo vedado,15
+la lisa,santa,15
+centro habana,san francisco,15
+lawton,marianao,15
+alamar,lawton,15
+cuba,miramar,15
+guanabo,miramar,15
+habana,miraflores,15
+arroyo naranjo,lawton,15
+miramar,paula,15
+guanabo,la habana,15
+centro habana,marianao,14
+miramar,santo suárez,14
+paula,santa fe,14
+la habana,nuevo vedado,14
+mayo,santa fe,14
+habana,managua,14
+arroyo naranjo,marianao,14
+nuevo vedado,octubre,14
+arroyo naranjo,guanabacoa,14
+marianao,santo suárez,14
+guanabo,santo suárez,14
+alamar,santo suárez,14
+plaza,regla,14
+cuba,nuevo vedado,14
+regla,siboney,13
+boyeros,luyanó,13
+paula,plaza,13
+nuevo vedado,regla,13
+guanabo,santa fe,13
+arroyo naranjo,san miguel,13
+boyeros,luyano,13
+regla,san francisco,12
+cuba,guanabo,12
+miramar,santa fe,12
+luyano,mantilla,12
+santa fe,santo suárez,12
+cuba,la coronela,12
+mantilla,mayo,12
+mantilla,regla,12
+belén,habana,12
+nuevo vedado,santa fe,12
+cojimar,mayo,12
+luyanó,mantilla,12
+pogolotti,regla,12
+luyano,nuevo vedado,12
+luyanó,nuevo vedado,12
+la habana,miramar,12
+guanabacoa,lawton,12
+regla,valle grande,11
+regla,santos suárez,11
+luyano,mayo,11
+cuba,santo suárez,11
+playa,san agustín,11
+alamar,plaza,11
+alamar,la lisa,11
+san francisco,santa,11
+la habana,wajay,11
+luyanó,mayo,11
+managua,santa,11
+managua,octubre,11
+california,la habana,11
+mayo,víbora park,11
+arroyo naranjo,playa,11
+mayo,miraflores,11
+paula,wajay,11
+la habana,managua,10
+guanabo,mayo,10
+la coronela,paula,10
+arroyo naranjo,boyeros,10
+paula,querejeta,10
+alturas,boyeros,10
+arroyo naranjo,san agustín,10
+la habana,querejeta,10
+guanabacoa,la lisa,10
+marianao,santiago,10
+alamar,san miguel,10
+san agustín,versalles,10
+managua,mantilla,10
+california,cuba,10
+mantilla,nuevo vedado,10
+buenavista,mayo,10
+lawton,santo suárez,10
+la lisa,san miguel,10
+boyeros,san miguel,10
+lawton,playa,10
+lawton,mantilla,10
+cuba,san francisco,9
+mayo,santiago,9
+mayo,valle grande,9
+centro habana,guanabacoa,9
+lawton,santiago,9
+la coronela,playa,9
+guanabacoa,san agustín,9
+playa,santiago,9
+guanabo,regla,9
+cuba,siboney,9
+alturas,paula,9
+guanabacoa,santos suárez,9
+plaza,santiago,9
+querejeta,regla,9
+santa,wajay,9
+guanabo,paula,9
+alberro,la habana,8
+marianao,santos suárez,8
+miraflores,regla,8
+la habana,víbora park,8
+boyeros,centro habana,8
+la lisa,octubre,8
+centro habana,plaza,8
+centro habana,octubre,8
+buenavista,la habana,8
+mayo,versalles,8
+mayo,miramar,8
+santa,versalles,8
+casablanca,la habana,8
+marianao,san agustín,8
+santos suárez,víbora park,8
+guanabacoa,managua,8
+la habana,santo suárez,8
+plaza,santa fe,8
+arroyo naranjo,versalles,8
+octubre,santiago,8
+playa,santos suárez,8
+cuba,wajay,8
+arroyo naranjo,santo suárez,8
+arroyo naranjo,santos suárez,8
+cuba,pogolotti,8
+alberro,regla,8
+alberro,paula,8
+san miguel,versalles,8
+alturas,cuba,8
+centro habana,lawton,8
+centro habana,la lisa,8
+mantilla,paula,8
+boyeros,lawton,8
+alamar,santos suárez,7
+alturas,versalles,7
+arroyo naranjo,plaza,7
+arroyo naranjo,san francisco,7
+octubre,versalles,7
+plaza,pogolotti,7
+marianao,nuevo vedado,7
+calabazar,cuba,7
+regla,santiago,7
+san francisco,santos suárez,7
+santa,santiago,7
+alamar,centro habana,7
+regla,versalles,7
+calabazar,paula,7
+boyeros,managua,7
+california,regla,7
+cuba,managua,7
+cuba,mantilla,7
+boyeros,la lisa,7
+nuevo vedado,playa,7
+la lisa,siboney,7
+marianao,versalles,7
+plaza,santos suárez,7
+alturas,miramar,6
+paula,versalles,6
+paula,santo suárez,6
+la habana,miraflores,6
+la coronela,marianao,6
+alberro,mayo,6
+alamar,santiago,6
+alturas,octubre,6
+guanabacoa,santiago,6
+san miguel,santos suárez,6
+regla,wajay,6
+alturas,guanabo,6
+managua,versalles,6
+managua,playa,6
+guanabacoa,san francisco,6
+san miguel,siboney,6
+calabazar,mayo,6
+mayo,wajay,6
+mayo,san francisco,6
+casablanca,cuba,6
+belén,la habana,6
+cojimar,lawton,6
+boyeros,santos suárez,6
+buenavista,cuba,6
+mantilla,santos suárez,6
+plaza,versalles,5
+guanabacoa,santo suárez,5
+alamar,belén,5
+alamar,arroyo naranjo,5
+santo suárez,víbora park,5
+santa fe,siboney,5
+santo suárez,santos suárez,5
+san miguel,santa fe,5
+calabazar,víbora park,5
+mantilla,santo suárez,5
+belén,boyeros,5
+marianao,wajay,5
+cojimar,santa,5
+la habana,san francisco,5
+arroyo naranjo,santiago,5
+arroyo naranjo,santa fe,5
+centro habana,luyanó,5
+centro habana,luyano,5
+managua,san miguel,5
+buenavista,paula,5
+santo suárez,siboney,5
+belén,guanabacoa,5
+la habana,valle grande,5
+la lisa,plaza,5
+belén,luyanó,5
+belén,nuevo vedado,5
+arroyo naranjo,la lisa,5
+la lisa,santo suárez,5
+mayo,santo suárez,5
+belén,mantilla,5
+santiago,santos suárez,5
+santa,siboney,5
+belén,regla,5
+boyeros,la coronela,5
+la lisa,lawton,5
+belén,octubre,5
+belén,luyano,5
+la lisa,santa fe,5
+cojimar,guanabacoa,5
+mayo,siboney,5
+la lisa,managua,5
+la coronela,lawton,4
+la coronela,octubre,4
+pogolotti,santa,4
+guanabo,la lisa,4
+la coronela,santos suárez,4
+guanabacoa,la coronela,4
+la coronela,plaza,4
+guanabacoa,guanabo,4
+la habana,siboney,4
+cojimar,playa,4
+cojimar,san miguel,4
+la habana,pogolotti,4
+marianao,siboney,4
+boyeros,valle grande,4
+la lisa,luyano,4
+la lisa,miramar,4
+la lisa,mantilla,4
+luyano,santo suárez,4
+centro habana,miramar,4
+nuevo vedado,pogolotti,4
+arroyo naranjo,cojimar,4
+la lisa,luyanó,4
+mantilla,san francisco,4
+buenavista,querejeta,4
+buenavista,miramar,4
+california,mayo,4
+boyeros,versalles,4
+managua,víbora park,4
+managua,marianao,4
+managua,mayo,4
+managua,santa fe,4
+alturas,la coronela,4
+luyanó,santo suárez,4
+buenavista,regla,4
+buenavista,santa,4
+san francisco,víbora park,4
+san miguel,santiago,4
+alamar,la coronela,4
+san francisco,santo suárez,4
+valle grande,wajay,3
+la coronela,pogolotti,3
+cojimar,marianao,3
+buenavista,santiago,3
+marianao,san francisco,3
+mantilla,san miguel,3
+luyanó,playa,3
+calabazar,santa,3
+playa,pogolotti,3
+alturas,santo suárez,3
+guanabo,siboney,3
+playa,san francisco,3
+santa fe,santiago,3
+alamar,siboney,3
+alamar,wajay,3
+santa fe,versalles,3
+san agustín,santa,3
+pogolotti,santa fe,3
+plaza,santo suárez,3
+guanabacoa,miramar,3
+guanabacoa,wajay,3
+guanabacoa,siboney,3
+nuevo vedado,siboney,3
+managua,santos suárez,3
+managua,santo suárez,3
+boyeros,víbora park,3
+boyeros,san francisco,3
+boyeros,pogolotti,3
+la coronela,santiago,3
+nuevo vedado,santiago,3
+luyano,playa,3
+playa,wajay,3
+plaza,san francisco,3
+plaza,san agustín,3
+miraflores,santa,3
+belén,playa,3
+miramar,siboney,3
+alamar,san francisco,3
+la lisa,wajay,3
+centro habana,nuevo vedado,3
+cojimar,luyano,3
+cojimar,luyanó,3
+centro habana,wajay,3
+lawton,nuevo vedado,3
+alturas,cojimar,3
+alturas,centro habana,3
+santa,valle grande,3
+querejeta,san miguel,3
+arroyo naranjo,centro habana,2
+arroyo naranjo,calabazar,2
+guanabo,wajay,2
+alamar,pogolotti,2
+alamar,managua,2
+siboney,wajay,2
+la coronela,santa,2
+la coronela,san miguel,2
+la coronela,san francisco,2
+la coronela,nuevo vedado,2
+buenavista,marianao,2
+marianao,querejeta,2
+mantilla,playa,2
+mayo,pogolotti,2
+mantilla,versalles,2
+california,paula,2
+calabazar,plaza,2
+luyanó,marianao,2
+california,octubre,2
+luyano,wajay,2
+luyano,siboney,2
+paula,santiago,2
+alturas,managua,2
+alturas,lawton,2
+alturas,nuevo vedado,2
+alturas,wajay,2
+alturas,san agustín,2
+alturas,siboney,2
+luyano,marianao,2
+lawton,wajay,2
+nuevo vedado,santo suárez,2
+nuevo vedado,santos suárez,2
+miramar,wajay,2
+arroyo naranjo,luyano,2
+arroyo naranjo,luyanó,2
+arroyo naranjo,miraflores,2
+nuevo vedado,wajay,2
+guanabo,nuevo vedado,2
+octubre,pogolotti,2
+casablanca,guanabacoa,2
+casablanca,san miguel,2
+cojimar,octubre,2
+octubre,san agustín,2
+guanabo,luyanó,2
+centro habana,cojimar,2
+centro habana,guanabo,2
+managua,paula,2
+managua,san francisco,2
+managua,plaza,2
+california,plaza,2
+calabazar,marianao,2
+calabazar,playa,2
+luyanó,wajay,2
+luyanó,siboney,2
+luyanó,santiago,2
+lawton,pogolotti,2
+centro habana,versalles,2
+lawton,santa fe,2
+lawton,managua,2
+lawton,miraflores,2
+alamar,alturas,2
+santo suárez,wajay,2
+belén,cuba,2
+miramar,nuevo vedado,2
+belén,pogolotti,2
+cuba,miraflores,2
+la lisa,nuevo vedado,2
+belén,paula,2
+centro habana,santiago,2
+centro habana,santa fe,2
+centro habana,san agustín,2
+cojimar,víbora park,2
+cojimar,la lisa,2
+miraflores,plaza,2
+centro habana,santo suárez,2
+centro habana,siboney,2
+luyano,santiago,2
+guanabo,luyano,2
+san agustín,siboney,2
+guanabacoa,pogolotti,2
+plaza,siboney,2
+alberro,alturas,2
+plaza,víbora park,2
+san agustín,san miguel,2
+santa fe,wajay,2
+san francisco,santa fe,2
+querejeta,santa,2
+pogolotti,santiago,2
+san miguel,víbora park,2
+san francisco,santiago,2
+pogolotti,santos suárez,2
+santa fe,santos suárez,2
+san miguel,santo suárez,1
+santa fe,valle grande,1
+santa fe,víbora park,1
+santiago,santo suárez,1
+querejeta,san agustín,1
+querejeta,santa fe,1
+querejeta,víbora park,1
+regla,santo suárez,1
+san agustín,santa fe,1
+san agustín,santiago,1
+san agustín,valle grande,1
+san agustín,víbora park,1
+santiago,versalles,1
+santo suárez,valle grande,1
+santo suárez,versalles,1
+guanabacoa,valle grande,1
+guanabacoa,víbora park,1
+playa,víbora park,1
+plaza,querejeta,1
+pogolotti,querejeta,1
+alamar,valle grande,1
+alberro,cuba,1
+alberro,guanabacoa,1
+alberro,managua,1
+alturas,calabazar,1
+alturas,california,1
+santos suárez,versalles,1
+siboney,valle grande,1
+siboney,víbora park,1
+miraflores,santa fe,1
+miraflores,víbora park,1
+miramar,octubre,1
+belén,guanabo,1
+belén,mayo,1
+belén,plaza,1
+boyeros,buenavista,1
+boyeros,cojimar,1
+miramar,plaza,1
+miramar,san agustín,1
+miramar,san miguel,1
+miramar,valle grande,1
+la lisa,miraflores,1
+la lisa,pogolotti,1
+la lisa,santiago,1
+la lisa,santos suárez,1
+la lisa,víbora park,1
+centro habana,miraflores,1
+mayo,querejeta,1
+miraflores,paula,1
+miraflores,playa,1
+miraflores,querejeta,1
+miraflores,san agustín,1
+centro habana,valle grande,1
+cojimar,guanabo,1
+lawton,san agustín,1
+lawton,siboney,1
+lawton,versalles,1
+luyano,miraflores,1
+luyano,miramar,1
+luyano,plaza,1
+miraflores,san miguel,1
+nuevo vedado,san agustín,1
+nuevo vedado,san miguel,1
+nuevo vedado,valle grande,1
+nuevo vedado,versalles,1
+arroyo naranjo,la coronela,1
+arroyo naranjo,querejeta,1
+arroyo naranjo,siboney,1
+la coronela,santa fe,1
+cojimar,mantilla,1
+cojimar,miraflores,1
+cojimar,plaza,1
+cojimar,santa fe,1
+cojimar,santiago,1
+cojimar,santos suárez,1
+octubre,wajay,1
+paula,pogolotti,1
+california,playa,1
+casablanca,mayo,1
+casablanca,octubre,1
+casablanca,paula,1
+casablanca,san francisco,1
+mantilla,marianao,1
+mantilla,san agustín,1
+boyeros,querejeta,1
+boyeros,san agustín,1
+buenavista,calabazar,1
+marianao,miraflores,1
+marianao,valle grande,1
+marianao,víbora park,1
+luyanó,santos suárez,1
+luyanó,valle grande,1
+buenavista,plaza,1
+buenavista,siboney,1
+calabazar,miraflores,1
+calabazar,querejeta,1
+calabazar,san agustín,1
+calabazar,san miguel,1
+calabazar,santa fe,1
+luyano,santos suárez,1
+luyano,valle grande,1
+luyanó,miraflores,1
+luyanó,miramar,1
+luyanó,plaza,1
+california,lawton,1
+california,luyano,1
+california,luyanó,1
+alturas,mantilla,1
+alturas,miraflores,1
+alturas,plaza,1
+alturas,pogolotti,1
+alturas,san francisco,1
+alturas,santos suárez,1
+alturas,valle grande,1
+playa,valle grande,1
+guanabo,plaza,1
+guanabo,san miguel,1
+guanabo,valle grande,1
+guanabo,versalles,1
+la coronela,managua,1
+valle grande,versalles,1
+alamar,miraflores,1
+versalles,víbora park,1

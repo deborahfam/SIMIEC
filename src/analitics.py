@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import networkx as nx
 import matplotlib.dates as mdates
+from datetime import datetime
 
 sns.set_theme(style="whitegrid")
 plt.rcParams['figure.dpi'] = 300      # Alta resolución para impresión  
@@ -21,7 +22,23 @@ except FileNotFoundError:
     print("❌ Error: Faltan los archivos CSV (datos_georeferenciados.csv o relaciones_lugares.csv)")
     exit()
 
-print(f"   -> {len(df)} reportes cargados.")
+print(f"   -> {len(df)} reportes cargados (total histórico).")
+
+# --- FILTRAR POR ÚLTIMO MES (5 de noviembre a 5 de diciembre) ---
+fecha_inicio = pd.Timestamp('2024-11-05')
+fecha_fin = pd.Timestamp('2024-12-05')
+df = df[(df['date'] >= fecha_inicio) & (df['date'] <= fecha_fin)].copy()
+
+print(f"   -> {len(df)} reportes en el período seleccionado (5 nov - 5 dic 2024).")
+
+# Filtrar relaciones para solo incluir lugares que aparecen en el período filtrado
+lugares_periodo = set(df['lugar_principal'].unique())
+df_rel = df_rel[
+    (df_rel['Source'].isin(lugares_periodo)) & 
+    (df_rel['Target'].isin(lugares_periodo))
+].copy()
+
+print(f"   -> {len(df_rel)} relaciones en el período seleccionado.")
 
 # --- 2. GRÁFICA TEMPORAL (TIMELINE) ---
 print("📈 Generando Fig 1: Línea de Tiempo...")
@@ -32,7 +49,7 @@ timeline = df.set_index('date').resample('h')['text'].count()
 
 # Plot
 ax = timeline.plot(kind='line', color='#d62728', linewidth=1.5)
-plt.title('Frecuencia de Reportes de Incidencias Eléctricas (Por Hora)', fontsize=14, fontweight='bold')
+plt.title('Frecuencia de Reportes de Incidencias Eléctricas (Por Hora)\nPeríodo: 5 Nov - 5 Dic 2024', fontsize=14, fontweight='bold')
 plt.ylabel('Cantidad de Reportes')
 plt.xlabel('Fecha y Hora')
 
@@ -62,7 +79,7 @@ heatmap_data.index = dias_es # Renombrar índice a español
 
 # Plot
 sns.heatmap(heatmap_data, cmap='YlOrRd', linewidths=.5, cbar_kws={'label': 'Nº Reportes'})
-plt.title('Concentración de Reportes: Día de la Semana vs Hora', fontsize=14, fontweight='bold')
+plt.title('Concentración de Reportes: Día de la Semana vs Hora\nPeríodo: 5 Nov - 5 Dic 2024', fontsize=14, fontweight='bold')
 plt.xlabel('Hora del Día')
 plt.ylabel('Día de la Semana')
 
@@ -78,7 +95,7 @@ top_places = df['lugar_principal'].value_counts().head(15)
 
 # Plot
 sns.barplot(x=top_places.values, y=top_places.index, palette='viridis', hue=top_places.index, legend=False)
-plt.title('Top 15 Zonas con Mayor Frecuencia de Reportes', fontsize=14, fontweight='bold')
+plt.title('Top 15 Zonas con Mayor Frecuencia de Reportes\nPeríodo: 5 Nov - 5 Dic 2024', fontsize=14, fontweight='bold')
 plt.xlabel('Cantidad de Menciones')
 plt.ylabel('Zona / Municipio Identificado')
 
@@ -114,7 +131,7 @@ nx.draw_networkx_nodes(G_filtered, pos, node_size=node_sizes, node_color='#3498d
 nx.draw_networkx_edges(G_filtered, pos, width=edge_widths, alpha=0.4, edge_color='gray')
 nx.draw_networkx_labels(G_filtered, pos, font_size=8, font_family='sans-serif', font_weight='bold')
 
-plt.title(f'Grafo de Co-ocurrencia de Cortes (Topología Inferida)\nFiltro: Conexiones con >= {umbral_peso} reportes conjuntos', fontsize=14)
+plt.title(f'Grafo de Co-ocurrencia de Cortes (Topología Inferida)\nPeríodo: 5 Nov - 5 Dic 2024 | Filtro: Conexiones con >= {umbral_peso} reportes conjuntos', fontsize=14)
 plt.axis('off') # Ocultar ejes
 
 plt.savefig('fig4_topologia_red.png')

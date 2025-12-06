@@ -6,6 +6,7 @@ from sklearn.manifold import MDS
 from sklearn.preprocessing import MinMaxScaler
 from collections import Counter
 import re
+from datetime import datetime
 
 INPUT_FILE = 'results/datos_georeferenciados.csv'
 plt.rcParams['figure.dpi'] = 300
@@ -18,6 +19,14 @@ def cargar_datos():
     try:
         df = pd.read_csv(INPUT_FILE)
         df['date'] = pd.to_datetime(df['date'])
+        
+        # Filtrar por último mes (5 de noviembre a 5 de diciembre)
+        fecha_inicio = pd.Timestamp('2024-11-05')
+        fecha_fin = pd.Timestamp('2024-12-05')
+        df = df[(df['date'] >= fecha_inicio) & (df['date'] <= fecha_fin)].copy()
+        
+        print(f"📅 Datos filtrados: {len(df)} reportes del período 5 nov - 5 dic 2024.")
+        
         df['time_block'] = df['date'].dt.floor('10T') 
         return df
     except FileNotFoundError:
@@ -44,7 +53,7 @@ def generar_matriz_transicion(df):
     
     plt.figure(figsize=(14, 12))
     sns.heatmap(prob_matrix, annot=False, cmap="rocket_r", linewidths=.5)
-    plt.title("Matriz de Probabilidad Condicional: Si cae X, ¿cae Y?", fontsize=16)
+    plt.title("Matriz de Probabilidad Condicional: Si cae X, ¿cae Y?\nPeríodo: 5 Nov - 5 Dic 2024", fontsize=16)
     plt.xlabel("Lugar Afectado (Consecuencia)")
     plt.ylabel("Lugar Reportado Inicialmente (Causa Potencial)")
     plt.tight_layout()
@@ -76,7 +85,7 @@ def mapa_semantico_mds(df):
     for i, txt in enumerate(distancia.index):
         plt.annotate(txt, (coords[i, 0]+0.02, coords[i, 1]+0.02), fontsize=9, alpha=0.8)
         
-    plt.title("Mapa Semántico de la Red Eléctrica (Distancia basada en Fallos Simultáneos)", fontsize=14)
+    plt.title("Mapa Semántico de la Red Eléctrica (Distancia basada en Fallos Simultáneos)\nPeríodo: 5 Nov - 5 Dic 2024", fontsize=14)
     plt.xlabel("Dimensión Latente 1")
     plt.ylabel("Dimensión Latente 2")
     plt.grid(True, linestyle='--', alpha=0.5)
@@ -114,7 +123,7 @@ def analisis_sentimiento_fases(df):
             axes[i].set_title(f"Top Palabras: {fase}")
             axes[i].set_xlabel("Frecuencia")
     
-    plt.suptitle("Vocabulario Diferencial según la Fase del Apagón", fontsize=16)
+    plt.suptitle("Vocabulario Diferencial según la Fase del Apagón\nPeríodo: 5 Nov - 5 Dic 2024", fontsize=16)
     plt.tight_layout()
     plt.savefig('fig7_sentimiento_fases.png')
     plt.close()
@@ -133,7 +142,7 @@ def patron_dia_noche(df):
     
     plt.figure(figsize=(12, 6))
     sns.countplot(data=df_top, x='lugar_principal', hue='periodo', palette='coolwarm')
-    plt.title("Distribución de Reportes Día vs Noche por Municipio", fontsize=14)
+    plt.title("Distribución de Reportes Día vs Noche por Municipio\nPeríodo: 5 Nov - 5 Dic 2024", fontsize=14)
     plt.xticks(rotation=45)
     plt.ylabel("Cantidad de Reportes")
     plt.tight_layout()
