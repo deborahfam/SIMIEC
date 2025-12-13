@@ -25,8 +25,6 @@ def cargar_datos():
         fecha_fin = pd.Timestamp('2024-12-05')
         df = df[(df['date'] >= fecha_inicio) & (df['date'] <= fecha_fin)].copy()
         
-        print(f"📅 Datos filtrados: {len(df)} reportes del período 5 nov - 5 dic 2024.")
-        
         df['time_block'] = df['date'].dt.floor('10T') 
         return df
     except FileNotFoundError:
@@ -37,8 +35,6 @@ def generar_matriz_transicion(df):
     """
     Calcula: Dado que se reportó el Lugar A, ¿qué tan probable es que se reporte el Lugar B en el mismo bloque temporal?
     """
-    print("🎲 Generando Matriz de Probabilidad Condicional (Efecto Dominó)...")
-    
     top_lugares = df['lugar_principal'].value_counts().head(20).index
     df_top = df[df['lugar_principal'].isin(top_lugares)]
     
@@ -65,8 +61,6 @@ def mapa_semantico_mds(df):
     Usa Multidimensional Scaling para dibujar un 'Mapa' sin tener coordenadas GPS,
     basado puramente en la 'distancia eléctrica' (co-ocurrencia).
     """
-    print("🗺️ Generando Mapa Semántico (Reconstrucción Topológica)...")
-    
     top_lugares = df['lugar_principal'].value_counts().head(30).index
     df_top = df[df['lugar_principal'].isin(top_lugares)]
     
@@ -97,8 +91,6 @@ def analisis_sentimiento_fases(df):
     """
     Analiza qué palabras se usan más al 'Inicio' vs al 'Final' del apagón.
     """
-    print("🗣️ Generando Comparativa de Palabras (Inicio vs Fin)...")
-    
     def clasificar_fase(texto):
         texto = texto.lower()
         if any(k in texto for k in KEYWORDS_INICIO): return 'Inicio (Ira/Reporte)'
@@ -132,8 +124,6 @@ def patron_dia_noche(df):
     """
     Contraste simple: ¿Quién reporta más de día vs de noche?
     """
-    print("☀️🌙 Generando Contraste Día/Noche...")
-    
     df['hora'] = df['date'].dt.hour
     df['periodo'] = df['hora'].apply(lambda x: 'Noche (19-06h)' if (x >= 19 or x < 6) else 'Día (07-18h)')
     
@@ -156,4 +146,3 @@ if __name__ == "__main__":
         mapa_semantico_mds(df)
         analisis_sentimiento_fases(df)
         patron_dia_noche(df)
-        print("\n✅ ¡Análisis Avanzado Completado! Revisa las imágenes fig5 a fig8.")
