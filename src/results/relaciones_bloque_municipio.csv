@@ -25,8 +25,8 @@ Bloque nan,centro habana,1865
 Bloque 5.0,línea,1862
 Bloque nan,mayo,1810
 Bloque 1.0,habana,1809
-Bloque nan,luyanó,1774
 Bloque nan,luyano,1774
+Bloque nan,luyanó,1774
 Bloque nan,san agustín,1675
 Bloque 2.0,playa,1498
 Bloque 2.0,boyeros,1425
@@ -78,8 +78,8 @@ Bloque 4.0,cojimar,693
 Bloque 3.0,paula,693
 Bloque 2.0,guanabacoa,681
 Bloque 5.0,versalles,672
-Bloque 4.0,luyano,672
 Bloque 4.0,luyanó,672
+Bloque 4.0,luyano,672
 Bloque 4.0,miramar,661
 Bloque 1.0,santos suárez,660
 Bloque nan,buenavista,659
@@ -175,8 +175,8 @@ Bloque 2.0,santo suárez,151
 Bloque nan,belén,149
 Bloque 1.0,mayo,148
 Bloque 4.0,mayo,144
-Bloque 5.0,luyano,140
 Bloque 5.0,luyanó,140
+Bloque 5.0,luyano,140
 Bloque 6.0,mayo,131
 Bloque 2.0,alturas,130
 Bloque 2.0,belén,126
@@ -212,18 +212,18 @@ Bloque 5.0,managua,53
 Bloque 4.0,siboney,49
 Bloque 4.0,víbora park,48
 Bloque 3.0,calabazar,46
-Bloque 3.0,luyano,43
 Bloque 3.0,luyanó,43
+Bloque 3.0,luyano,43
 Bloque 1.0,octubre,43
 Bloque 6.0,marianao,41
 Bloque 3.0,santiago,40
 Bloque 4.0,pogolotti,39
-Bloque 2.0,siboney,38
 Bloque 6.0,plaza,38
+Bloque 2.0,siboney,38
 Bloque 4.0,buenavista,33
 Bloque 4.0,san agustín,30
-Bloque 6.0,boyeros,29
 Bloque 3.0,octubre,29
+Bloque 6.0,boyeros,29
 Bloque 5.0,lawton,28
 Bloque 4.0,la coronela,27
 Bloque 1.0,santiago,25
@@ -231,15 +231,15 @@ Bloque 3.0,alamar,23
 Bloque 3.0,alturas,23
 Bloque 4.0,santo suárez,22
 Bloque 5.0,la coronela,22
-Bloque 6.0,versalles,22
 Bloque 1.0,boyeros,22
+Bloque 6.0,versalles,22
 Bloque 3.0,lawton,20
 Bloque 3.0,miramar,19
-Bloque 2.0,guanabo,19
 Bloque 1.0,querejeta,19
+Bloque 2.0,guanabo,19
 Bloque 2.0,la lisa,19
-Bloque 6.0,nuevo vedado,18
 Bloque 4.0,managua,18
+Bloque 6.0,nuevo vedado,18
 Bloque 4.0,alberro,18
 Bloque 2.0,mantilla,17
 Bloque 2.0,lawton,14
@@ -254,11 +254,11 @@ Bloque 3.0,nuevo vedado,9
 Bloque 4.0,santiago,9
 Bloque 5.0,plaza,9
 Bloque 2.0,santiago,9
-Bloque 3.0,miraflores,8
 Bloque 5.0,siboney,8
-Bloque 2.0,luyano,8
 Bloque 2.0,víbora park,8
+Bloque 3.0,miraflores,8
 Bloque 2.0,luyanó,8
+Bloque 2.0,luyano,8
 Bloque 3.0,santos suárez,8
 Bloque 3.0,marianao,8
 Bloque 6.0,alamar,7
@@ -268,12 +268,12 @@ Bloque 4.0,versalles,7
 Bloque 6.0,san francisco,6
 Bloque 1.0,lawton,6
 Bloque 2.0,san agustín,6
+Bloque 6.0,mantilla,5
 Bloque 6.0,miramar,5
-Bloque 6.0,california,5
 Bloque 2.0,san francisco,5
 Bloque 6.0,guanabacoa,5
-Bloque 6.0,mantilla,5
 Bloque 2.0,la coronela,5
+Bloque 6.0,california,5
 Bloque 4.0,wajay,5
 Bloque 5.0,san francisco,5
 Bloque 4.0,san francisco,5
@@ -287,14 +287,14 @@ Bloque 3.0,managua,3
 Bloque 1.0,casablanca,3
 Bloque 6.0,siboney,3
 Bloque 4.0,belén,3
-Bloque 6.0,luyano,3
 Bloque 3.0,belén,3
+Bloque 6.0,luyanó,3
 Bloque 3.0,la coronela,3
 Bloque 1.0,wajay,3
 Bloque 5.0,santiago,3
 Bloque 2.0,cojimar,3
 Bloque 1.0,california,3
-Bloque 6.0,luyanó,3
+Bloque 6.0,luyano,3
 Bloque 1.0,valle grande,2
 Bloque 6.0,pogolotti,2
 Bloque 4.0,miraflores,2
