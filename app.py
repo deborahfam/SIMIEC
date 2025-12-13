@@ -603,6 +603,53 @@ with tab5:
             fig_cooc.update_layout(height=700)
             st.plotly_chart(fig_cooc, use_container_width=True)
             st.caption("⚠️ NOTA: Mide co-ocurrencia simultánea, no causalidad temporal.")
+        else:
+            st.warning("No hay datos suficientes para calcular la matriz de co-ocurrencia.")
+    
+    with tab5_2:
+        st.subheader("Matriz de Transición Temporal Real")
+        st.caption("P(Lugar B reportado | Lugar A reportado ANTES)")
+        
+        max_window = st.slider("Ventana temporal máxima (minutos)", 10, 60, 30)
+        
+        # CALCULADO EN TIEMPO REAL: Matriz de transición calculada desde datos filtrados ordenados
+        df_sorted = df.sort_values('date').copy()
+        top_lugares_trans = df['lugar_principal'].value_counts().head(DEFAULT_TOP_LOCATIONS_MATRIX).index
+        df_top_trans = df_sorted[df_sorted['lugar_principal'].isin(top_lugares_trans)].copy()
+        
+        if len(df_top_trans) >= 2:
+            transitions = []
+            for i in range(len(df_top_trans) - 1):
+                lugar_actual = df_top_trans.iloc[i]['lugar_principal']
+                lugar_siguiente = df_top_trans.iloc[i+1]['lugar_principal']
+                tiempo_diff = (df_top_trans.iloc[i+1]['date'] - df_top_trans.iloc[i]['date']).total_seconds() / 60
+                
+                if tiempo_diff <= max_window and lugar_actual != lugar_siguiente:
+                    transitions.append((lugar_actual, lugar_siguiente))
+            
+            if transitions:
+                transition_df = pd.DataFrame(transitions, columns=['From', 'To'])
+                transition_counts = pd.crosstab(transition_df['From'], transition_df['To'])
+                transition_matrix = transition_counts.div(transition_counts.sum(axis=1), axis=0).fillna(0)
+                transition_matrix = transition_matrix.reindex(
+                    index=top_lugares_trans,
+                    columns=top_lugares_trans,
+                    fill_value=0
+                )
+                
+                fig_trans = px.imshow(
+                    transition_matrix,
+                    color_continuous_scale='viridis',
+                    title=f"Matriz de Transición Temporal (ventana ≤{max_window} min)",
+                    labels=dict(x="Lugar B (Reportado después)", y="Lugar A (Reportado primero)", color="Probabilidad")
+                )
+                fig_trans.update_layout(height=700)
+                st.plotly_chart(fig_trans, use_container_width=True)
+                st.caption("ℹ️ Mide transición temporal real. Valores altos sugieren posible efecto dominó.")
+            else:
+                st.warning("No se encontraron transiciones en la ventana temporal especificada.")
+        else:
+            st.warning("Se necesitan al menos 2 reportes para calcular transiciones.")
 
 # ========== FOOTER ==========
 st.markdown("---")
